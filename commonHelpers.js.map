@@ -1,0 +1,1 @@
+{"version":3,"file":"commonHelpers.js","sources":["../src/js/1-timer.js"],"sourcesContent":["const x = 1;\nconst y = 2;\nconsole.log(x + y);\n"],"names":["x","y"],"mappings":"oDAAA,MAAMA,EAAI,EACJC,EAAI,EACV,QAAQ,IAAID,EAAIC,CAAC"}
