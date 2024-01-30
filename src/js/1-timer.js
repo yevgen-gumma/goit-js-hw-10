@@ -6,6 +6,9 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+const myInput = document.getElementById('datetime-picker');
+// const startBtn = document.getElementById('start-btn');
+
 let userSelectedDate;
 let timerInterval;
 
@@ -22,6 +25,8 @@ const options = {
   onClose(selectedDates) {
     const selectedDate = selectedDates[0];
     const currentDate = new Date();
+    const startBtn = document.getElementById('start-btn');
+
     if (selectedDate < currentDate) {
       iziToast.error({
         message: 'Please choose a date in the future',
@@ -35,19 +40,24 @@ const options = {
     } else {
       startBtn.disabled = false;
       userSelectedDate = selectedDate;
-      // Виклик функції оновлення таймера
-      updateTimer();
-      // Запуск таймера кожну секунду
-      timerInterval = setInterval(updateTimer, 1000);
+      // // Виклик функції оновлення таймера
+      // updateTimer();
+      // // Запуск таймера кожну секунду
+      // timerInterval = setInterval(updateTimer, 1000);
     }
   },
 };
 
 flatpickr('#datetime-picker', options);
 
-const myInput = document.getElementById('datetime-picker');
-const startBtn = document.querySelector('.start-button');
-startBtn.disabled = true;
+const startBtn = document.getElementById('start-btn');
+
+startBtn.addEventListener('click', () => {
+  startBtn.disabled = true;
+  userSelectedDate = new Date(myInput.value);
+  timerInterval = setInterval(updateTimer, 1000);
+  updateTimer();
+});
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -98,7 +108,7 @@ function formatTimeValue(value) {
   return value < 10 ? `0${value}` : value;
 }
 
-// ф-ція, яка додає ведучий нуль до чисел, що складаються з однієї цифри:
-function addLeadingZero(value) {
-  return value.toString().padStart(2, '0');
-}
+// // ф-ція, яка додає ведучий нуль до чисел, що складаються з однієї цифри:
+// function addLeadingZero(value) {
+//   return value.toString().padStart(2, '0');
+// }

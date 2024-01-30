@@ -32,7 +32,7 @@ body {
   padding-left: 16px;
 }
 
-.start-button {
+/* .start-button {
   min-width: 75px;
   height: 40px;
   flex-shrink: 0;
@@ -51,7 +51,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-}
+} */
 
 .to-flex {
   display: flex;
