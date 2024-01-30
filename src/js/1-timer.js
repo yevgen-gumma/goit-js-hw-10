@@ -6,6 +6,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import iconOI from '../img/bi_x-octagon.png';
+
 const myInput = document.getElementById('datetime-picker');
 // const startBtn = document.getElementById('start-btn');
 
@@ -32,7 +34,7 @@ const options = {
         message: 'Please choose a date in the future',
         messageColor: 'white',
         backgroundColor: '#EF4040',
-        position: 'topCenter',
+        position: 'topRight',
         messageSize: '16px',
         timeout: 3000,
       });
