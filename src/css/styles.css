@@ -8,6 +8,19 @@ body {
   /* padding: 36px 929px 316px 156px; */
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .timer {
   display: flex;
   justify-content: space-between;
@@ -97,4 +110,66 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+
+/* snackbar ================================ */
+
+.title-input-field {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+}
+input[type='radio']:checked {
+  background-color: #4e75ff;
+}
+.label-delay {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.fieldset {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.label-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: #4e75ff;
+}
+.button:hover {
+  background: #6c8cff;
+  transition: 0.5s;
 }

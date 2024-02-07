@@ -6,8 +6,6 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import iconOI from '../img/bi_x-octagon.png';
-
 const myInput = document.getElementById('datetime-picker');
 // const startBtn = document.getElementById('start-btn');
 

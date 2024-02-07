@@ -4,8 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <form class="form">
+      <label class="label-delay">
+        <span class="title-input-field">Delay (ms)</span>
+        <input type="number" name="delay" class="input" required />
+      </label>
+
+      <fieldset class="fieldset">
+        <legend class="title-input-field">State</legend>
+        <label class="label-state">
+          <input
+            class="radio-button"
+            type="radio"
+            name="state"
+            value="fulfilled"
+            required
+          />
+          <span class="title-input-field">Fulfilled</span>
+        </label>
+        <label class="label-state">
+          <input
+            class="radio-button"
+            type="radio"
+            name="state"
+            value="rejected"
+            required
+          />
+          <span class="title-input-field">Rejected</span>
+        </label>
+      </fieldset>
+
+      <button class="button" type="submit">Create notification</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
     <script src="./js/2-snackbar.js" type="module"></script>
   </body>
 </html>
